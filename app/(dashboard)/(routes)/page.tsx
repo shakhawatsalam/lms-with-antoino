@@ -1,5 +1,8 @@
-import { Button } from "@/components/ui/button";
-
+import { UserButton } from "@clerk/nextjs";
 export default function Home() {
-  return <div>This is a procted page</div>;
+  return (
+    <div>
+      <UserButton afterSignOutUrl='/' />
+    </div>
+  );
 }
