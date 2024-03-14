@@ -1,8 +1,8 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { BarChart, Compass, Layout, List } from "lucide-react";
 import SideBarItem from "./SideBarItem";
-import { usePathname } from "next/navigation";
 
 const gustRoutes = [
   {
