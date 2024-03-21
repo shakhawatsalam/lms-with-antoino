@@ -59,7 +59,7 @@ export const AttachmentForm = ({
       setDeletingId(null);
     }
   };
-  console.log(initialData);
+
   return (
     <div className='mt-6  border bg-slate-100 rounded-md p-4 border-sky-700'>
       <div className='font-medium flex items-center justify-between'>
