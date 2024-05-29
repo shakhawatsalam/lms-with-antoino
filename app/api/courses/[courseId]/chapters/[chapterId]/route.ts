@@ -99,13 +99,14 @@ export async function PATCH(
   }
 ) {
   try {
+ 
     const { userId } = auth();
     const { isPublished, ...values } = await req.json();
-
+    console.log(isPublished, values);
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
-
+    
     const ownCourse = await db.course.findUnique({
       where: {
         id: params.courseId,
@@ -126,7 +127,7 @@ export async function PATCH(
         ...values,
       },
     });
-
+  
     // * VIDEO UPLOADING
     if (values.videoUrl) {
       const existingMuxData = await db.muxData.findFirst({
