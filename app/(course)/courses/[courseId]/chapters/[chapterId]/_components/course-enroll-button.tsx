@@ -15,7 +15,7 @@ export const CourseEnrollButton = ({
   price,
   courseId,
 }: CourseEnrollButtonProps) => {
-  console.log(courseId)
+
   const [isLoading, setIsLoading] = useState(false);
 
   const onClick = async () => {
